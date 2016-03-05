@@ -25,9 +25,11 @@ apt-get install tmux git fish -y
 #########################################
 
 # Install steps for X app
-RUN git clone https://github.com/XX-net/XX-Net.git /opt/xx-net;mkdir -p /etc/my_init.d;
+RUN git clone https://github.com/XX-net/XX-Net.git /opt/xx-net;mkdir -p /etc/my_init.d
 ADD firstrun.sh /etc/my_init.d/firstrun.sh
 RUN chmod +x /etc/my_init.d/firstrun.sh
+
+COPY startapp.sh /startapp.sh
 
 #########################################
 ##         EXPORTS AND VOLUMES         ##
