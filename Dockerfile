@@ -20,6 +20,14 @@ apt-get update && \
 apt-get install -y ImageMagick && \
 apt-get install tmux git fish -y
 
+RUN apt-get -y install curl
+RUN apt-get -y install python python-dev
+RUN apt-get -y install libevent-dev
+RUN apt-get -y install python-gevent python-openssl python-crypto
+
+RUN apt-get -y install python-pip
+RUN pip install dnslib
+
 #########################################
 ##          GUI APP INSTALL            ##
 #########################################
