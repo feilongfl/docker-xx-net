@@ -38,6 +38,7 @@ ADD firstrun.sh /etc/my_init.d/firstrun.sh
 RUN chmod +x /etc/my_init.d/firstrun.sh
 
 COPY startapp.sh /startapp.sh
+RUN chmod +x /startapp.sh
 
 #########################################
 ##         EXPORTS AND VOLUMES         ##
